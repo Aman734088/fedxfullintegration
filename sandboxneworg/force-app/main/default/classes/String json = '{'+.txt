@@ -1,0 +1,68 @@
+String json = '{'+
+		'        \"Pricebook2Id\": \"01s5f0000065WXiAAM\",'+
+		'        \"Name\": \"John Doe1\",'+
+		'        \"Status\": \"Draft\",'+
+		'        \"EffectiveDate\": \"2019-08-01\",'+
+		'        \"BillingStreet\": \"1166 W Newport Center Dr\",'+
+		'        \"BillingCity\": \"Deerfield Beach\",'+
+		'        \"BillingState\": \"FL\",'+
+		'        \"BillingPostalCode\": \"33442\",'+
+		'        \"BillingCountry\": \"us\",'+
+		'        \"BillingPhoneNumber\": \"3333333333\",'+
+		'        \"OrderedDate\": \"2018-09-18T17:15:58.000Z\",'+
+		'        \"BillingEmailAddress\": \"john1@doe.com\",'+
+		'        \"AccountId\": \"0013C00000kunm2QAA\",'+
+		'        \"SalesChannelId\": \"0bI3C00000003s9UAA\",'+
+		'        \"OrderDeliverGroup\":{'+
+		'             \"EmailAddress\": \"john@doe.com\",'+
+		'            \"DeliverToCity\": \"Deerfield Beach\",'+
+		'            \"DeliverToCountry\": \"us\",'+
+		'            \"DeliverToName\": \"John Doe\",'+
+		'            \"DeliverToPostalCode\": \"33442\",'+
+		'            \"DeliverToState\": \"FL\",'+
+        '            \"OrderDeliveryMethodId\":\"2Dm3C000000060qSAA\",'+
+		'            \"DeliverToStreet\": \"1166 W Newport Center Dr\",'+
+		'            \"PhoneNumber\": \"3333333333\"'+
+		'             '+
+		'},'+
+		'     	\"OrderItems\":[{'+
+		'            \"Description\": \"WOMEN\'S TORPEDO JACKET\",'+
+		'            \"Type\": \"Order Product\",'+
+		'            \"Quantity\": 1,'+
+		'            \"TotalLineAmount\": 79.2,'+
+		'            \"LineNumber\": 1,'+
+		'            \"UnitPrice\": 79.2,'+
+        '            \"PriceBookEntryId\":\"01u3C00000D7bonQAB\",'+ 
+        '            \"Product2Id\": \"01t5f0000011LXVAA2\"'+ 
+		'            '+
+		'          },'+
+		'          {'+
+		'            \"Description\": \"MICA FL 1\",'+
+		'            \"Type\": \"Order Product\",'+
+		'            \"Quantity\": 1,'+
+		'            \"TotalLineAmount\": 255.2,'+
+		'            \"LineNumber\": 2,'+
+		'            \"UnitPrice\": 255.2,'+
+        '            \"PriceBookEntryId\":\"01u3C00000DOV9ZQAX\",'+ 
+        '            \"Product2Id\": \"01t5f0000011LXZAA2\"'+ 
+		'            '+
+		'          },'+
+		'         {'+
+		'            \"Description\": \"Shipping\",'+
+		'            \"Product2Id\": \"01t8M000000BLh4QAG\",'+
+		'            \"Type\": \"Delivery Charge\",'+
+		'            \"Quantity\": 1,'+
+		'            \"TotalLineAmount\": 9.99,'+
+		'            \"LineNumber\": 1000,'+
+		'            \"UnitPrice\": 9.99,'+
+        '            \"PriceBookEntryId\":\"01u3C00000DOQ1VQAX\",'+ 
+        '            \"Product2Id\": \"01t5f0000011LXWAA2\"'+ 
+		'        '+
+		'        }'+
+		']'+
+		'}';
+
+Map<String, Object> theMap = new Map<String,Object>();
+     theMap.put('testData',json);
+            Flow.Interview.Create_Order_Flow stage = new Flow.Interview.Create_Order_Flow(theMap);
+            stage.start();
